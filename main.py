@@ -1,6 +1,3 @@
-import os
-import sys
-
 from elasticsearch import Elasticsearch
 
 es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
@@ -47,8 +44,8 @@ account_to_add = {
 #  added_account = es.index(index='bank', id=1002, body=account_to_add)
 #  print(added_account)
 
-account_with_id_1002 = es.get(index="bank", id=1002)
-print(account_with_id_1002['_source'])
+#  account_with_id_1002 = es.get(index="bank", id=1002)
+#  print(account_with_id_1002['_source'])
 
 #  delete_res = es.delete(index='bank', id=1002)
 #  print(delete_res['result'])
